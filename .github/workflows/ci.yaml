@@ -8,7 +8,8 @@ branches: [ main ]
 jobs:
 test:
 name: Test on ${{ matrix.os }} (Python${{ matrix.python-version }})
-runs-on: ${{ matrix.os }}strategy:
+runs-on: ${{ matrix.os }}
+strategy:
   fail-fast: false
   matrix:
     os: [ ubuntu-latest, windows-latest, macos-latest ]
